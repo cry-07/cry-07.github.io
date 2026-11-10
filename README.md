@@ -107,7 +107,20 @@ tags:
 
 ## 发布到 GitHub Pages
 
-当前只完成本地制作，没有创建远程仓库或公开发布。准备好 GitHub 用户名后：
+仓库已创建为 [cry-07/cry-07.github.io](https://github.com/cry-07/cry-07.github.io)，并已将 Pages 发布来源设为 GitHub Actions。正式首页为 [cryself](https://cry-07.github.io/)，讲义入口为 [计算方法讲义](https://cry-07.github.io/numerical-methods/)。每次推送到 `main` 后会自动构建发布，可在仓库的 Actions 页面查看结果。
+
+日常更新笔记时，在本项目目录运行：
+
+```powershell
+npm run import:notes
+npm run build
+npm run check:site
+git add .
+git commit -m "Update numerical methods notes"
+git push
+```
+
+如果只是写博客文章或修改样式，可以跳过导入笔记。下面的步骤供重建站点或迁移仓库时参考：
 
 1. 使用账号 `cry-07` 创建名为 `cry-07.github.io` 的仓库，这样主页地址是 `https://cry-07.github.io/`，讲义地址是 `https://cry-07.github.io/numerical-methods/`。
 2. **把本项目目录的内容放在仓库根目录**，包括隐藏目录 `.github`、`package-lock.json`、`handouts` 与源码。不要上传 `node_modules` 或 `dist`。
