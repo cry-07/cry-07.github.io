@@ -1,0 +1,37 @@
+---
+import { site, href, notesHref } from '../../site.config.mjs';
+import '../styles/blog.css';
+import 'katex/dist/katex.min.css';
+const { title = site.name, description = site.description, compact = false } = Astro.props;
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title === site.name ? `${site.name} · 个人博客` : `${title} · ${site.name}`}</title>
+    <meta name="description" content={description} /><meta name="theme-color" content="#fafaf9" />
+    <link rel="icon" type="image/svg+xml" href={href('favicon.svg')} />
+    <script is:inline>try{const v=localStorage.getItem('vitepress-theme-appearance');document.documentElement.classList.toggle('dark',v==='dark'||((!v||v==='auto')&&matchMedia('(prefers-color-scheme:dark)').matches))}catch{document.documentElement.classList.toggle('dark',matchMedia('(prefers-color-scheme:dark)').matches)}</script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">跳到正文</a>
+    <header class:list={['hero', { compact }]}>
+      <img class="hero-landscape" src={href('hero.svg')} alt="" aria-hidden="true" />
+      <nav class="topnav" aria-label="主导航">
+        <a href={href()} class="wordmark">{site.name}<span> / FIELD NOTES</span></a>
+        <div class="nav-links"><a href={href()}>首页</a><a href={notesHref()}>计算方法 <span>↗</span></a><a href={href('about/')}>关于</a><button id="theme-toggle" aria-label="切换到深色" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.7 13A8.7 8.7 0 0 1 11 3.3 8.8 8.8 0 1 0 20.7 13Z"/></svg></button></div>
+      </nav>
+      {!compact && <div class="hero-copy"><span class="eyebrow light">A PERSONAL SPACE FOR LEARNING</span><h1>把好奇，<br />写成理解。</h1><p>想清楚一点，再向前一步。</p></div>}
+      {!compact && <div class="hero-caption"><span>在推导中理解，在计算中验证。</span><span>01 / KEEP EXPLORING</span></div>}
+    </header>
+    <slot />
+    <footer class="site-footer"><a class="footer-mark" href={href()}>{site.name}<span>保持好奇，慢慢积累。</span></a><span>© {new Date().getFullYear()} · 学习与记录</span><a href="#top" aria-label="返回顶部">回到顶部 ↑</a></footer>
+    <script>
+      const toggle = document.querySelector<HTMLButtonElement>('#theme-toggle');
+      function updateThemeButton() { const dark = document.documentElement.classList.contains('dark'); toggle?.setAttribute('aria-label', dark ? '切换到浅色' : '切换到深色'); toggle?.setAttribute('aria-pressed', String(dark)); document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#171717' : '#fafaf9'); }
+      updateThemeButton();
+      toggle?.addEventListener('click', () => { const dark = document.documentElement.classList.toggle('dark'); try { localStorage.setItem('vitepress-theme-appearance', dark ? 'dark' : 'light'); } catch {} updateThemeButton(); });
+      matchMedia('(prefers-color-scheme:dark)').addEventListener('change', e => { let stored; try { stored=localStorage.getItem('vitepress-theme-appearance'); } catch {} if(!stored||stored==='auto'){ document.documentElement.classList.toggle('dark', e.matches); updateThemeButton(); } });
+    </script>
+  </body>
+</html>

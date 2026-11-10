@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.astro/
+handouts/.vitepress/dist/
+handouts/.vitepress/cache/
+.superpowers/
+*.log
+notes-source.local.json
+*.zip

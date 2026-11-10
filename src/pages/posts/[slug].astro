@@ -1,0 +1,11 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { getPosts } from '../../lib/posts';
+import { href } from '../../../site.config.mjs';
+export function getStaticPaths() { return getPosts().map(post => ({ params: { slug: post.slug }, props: { post } })); }
+const { post } = Astro.props;
+const Content = post.Content;
+---
+<BlogLayout title={post.title} description={post.description} compact>
+  <main id="main" class="post-grid"><article class="post-body"><a class="back-link" href={href()}>← 返回全部记录</a><div class="eyebrow">{post.date} · {post.tags.join(' / ')}</div><h1>{post.title}</h1><p class="post-description">{post.description}</p><div class="prose"><Content /></div></article><aside class="post-outline"><span class="eyebrow">本页目录</span><nav aria-label="文章目录">{post.headings.filter(h => h.depth > 1 && h.depth < 4).map(h => <a style={`padding-left:${(h.depth-2)*12}px`} href={`#${h.slug}`}>{h.text}</a>)}</nav></aside></main>
+</BlogLayout>

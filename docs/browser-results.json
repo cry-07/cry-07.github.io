@@ -1,0 +1,33 @@
+{
+  "results": [
+    "desktop home: no horizontal overflow",
+    "home: filters, search, empty state, persisted theme",
+    "desktop course: no horizontal overflow",
+    "course: full-text search results, no-results, Escape",
+    "desktop error-analysis: no horizontal overflow",
+    "desktop root-finding: no horizontal overflow",
+    "desktop interpolation: no horizontal overflow",
+    "desktop approximation: no horizontal overflow",
+    "desktop least-squares: no horizontal overflow",
+    "desktop fft: no horizontal overflow",
+    "desktop linear-systems: no horizontal overflow",
+    "desktop eigenvalues: no horizontal overflow",
+    "desktop svd: no horizontal overflow",
+    "Newton: step, run, convergence, reset, derivative-zero, cycle limit",
+    "images: keyboard zoom, Escape, focus restored",
+    "about and HTTP 404",
+    "mobile home: no horizontal overflow",
+    "mobile course: no horizontal overflow",
+    "mobile root-finding: no horizontal overflow",
+    "mobile svd: no horizontal overflow",
+    "mobile: chapter navigation",
+    "320px : no horizontal overflow",
+    "320px numerical-methods/: no horizontal overflow",
+    "320px numerical-methods/notes/root-finding: no horizontal overflow",
+    "320px numerical-methods/notes/svd: no horizontal overflow"
+  ],
+  "errors": [],
+  "requests": [
+    "404 http://127.0.0.1:4173/does-not-exist"
+  ]
+}

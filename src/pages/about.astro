@@ -1,0 +1,7 @@
+---
+import BlogLayout from '../layouts/BlogLayout.astro';
+import { href, notesHref } from '../../site.config.mjs';
+---
+<BlogLayout title="关于这里" compact>
+  <main id="main" class="standalone-page"><a class="back-link" href={href()}>← 返回首页</a><span class="eyebrow">ABOUT THIS NOTEBOOK</span><h1>把学过的东西，<br/>再想明白一点。</h1><div class="prose"><p>这里用来保存学习过程中的推导、图像和想法。记录不只为了留下一份答案，也为了在之后重读时，仍然能顺着思路走一遍。</p><h2>从计算方法开始</h2><p>目前的课程讲义涵盖误差分析、求根、插值与逼近、最小二乘、FFT，以及矩阵分解。正文保留完整推导，配合图像与交互演示，把抽象公式和具体计算连起来。</p><p>这些是持续整理的个人学习笔记。遇到不清楚的地方，值得停下来重新推一遍。</p><a class="button-link" href={notesHref()}>阅读计算方法讲义 →</a></div></main>
+</BlogLayout>

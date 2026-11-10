@@ -1,0 +1,206 @@
+[
+  {
+    "file": "计算方法 1.1 误差分析.md",
+    "slug": "error-analysis",
+    "sourceSha256": "b4a66c6f75e71a5699f0ed780ddd6aeb0c21cda4623600a3d98134556a691f94",
+    "characters": 3224,
+    "images": 0,
+    "assets": [],
+    "fixes": [
+      "补齐单位舍入误差公式的结尾 $"
+    ]
+  },
+  {
+    "file": "计算方法 1.2 二分法、牛顿法.md",
+    "slug": "root-finding",
+    "sourceSha256": "797bfbec2a50f5edb7a3892567a496eb3db1e91a34c1a8eae0978d1260f57b36",
+    "characters": 3992,
+    "images": 2,
+    "assets": [
+      {
+        "file": "计算方法（二）二分法、牛顿法.assets/image-20260923162813172.png",
+        "sha256": "7e94317d48768cbc95d82a91b2c69acec614ba312baee402a30170178937e8d6"
+      },
+      {
+        "file": "计算方法（二）二分法、牛顿法.assets/image-20260923171933607.png",
+        "sha256": "610737dd75cd8ec00164a0d4ee4dfeb1610ed01c6527c88d27f77f2b03a9a51b"
+      }
+    ],
+    "fixes": [
+      "将公式外的粗体标记转换为兼容中文相邻字符的 strong 标签",
+      "将公式外的粗体标记转换为兼容中文相邻字符的 strong 标签",
+      "将公式外的粗体标记转换为兼容中文相邻字符的 strong 标签"
+    ]
+  },
+  {
+    "file": "计算方法 2 插值、秘密分享、自纠错码.md",
+    "slug": "interpolation",
+    "sourceSha256": "137dbd420269b90581fbd9b7b76ad2fac88dae34938031664c9c597f8c184562",
+    "characters": 5643,
+    "images": 1,
+    "assets": [
+      {
+        "file": "计算方法（三）插值、秘密分享、自纠错码.assets/image-20260924163854826.png",
+        "sha256": "482c071af2b9afc2764fc7b692140d45c69d725a21821388b6f7876df565d8c2"
+      }
+    ],
+    "fixes": [
+      "移除行内公式分隔符内侧空白"
+    ]
+  },
+  {
+    "file": "计算方法 3 Chebyshev多项式与函数逼近.md",
+    "slug": "approximation",
+    "sourceSha256": "badf9d171875b45215d2c88629cb57fb6bf94c2b956ffa4cf4c051fa6c39e485",
+    "characters": 6305,
+    "images": 3,
+    "assets": [
+      {
+        "file": "计算方法（四）Chebyshev多项式与函数逼近.assets/equioscillation.png",
+        "sha256": "6b542d623f919f1ffbb70e9b4585f1add26d2a48c9be1ed3ae3d99fe07aa42d6"
+      },
+      {
+        "file": "计算方法（四）Chebyshev多项式与函数逼近.assets/minimax-proof.png",
+        "sha256": "c4e607bd3d2c7ef98d9fd7522bc137cda851e0d9089e1a10119229283159591e"
+      },
+      {
+        "file": "计算方法（四）Chebyshev多项式与函数逼近.assets/chebyshev-nodes.png",
+        "sha256": "0d883b19110c022674b5f031758fab184b1fbdb3803da822bf7cac1d519c0332"
+      }
+    ],
+    "fixes": [
+      "修复图片路径：./计算方法（四）Chebyshev多项式、函数逼近与最小二乘.assets/equioscillation.png → 计算方法（四）Chebyshev多项式与函数逼近.assets\\equioscillation.png",
+      "修复图片路径：./计算方法（四）Chebyshev多项式、函数逼近与最小二乘.assets/minimax-proof.png → 计算方法（四）Chebyshev多项式与函数逼近.assets\\minimax-proof.png",
+      "修复图片路径：./计算方法（四）Chebyshev多项式、函数逼近与最小二乘.assets/chebyshev-nodes.png → 计算方法（四）Chebyshev多项式与函数逼近.assets\\chebyshev-nodes.png"
+    ]
+  },
+  {
+    "file": "计算方法 4 最小二乘法与 QR 分解.md",
+    "slug": "least-squares",
+    "sourceSha256": "e6e294c49d372f87f97b6eac6b72f6cbb95fcad7e8a3aff3dd670b5ad40aeb0c",
+    "characters": 13833,
+    "images": 1,
+    "assets": [
+      {
+        "file": "计算方法（四）Chebyshev多项式、函数逼近与最小二乘.assets/least-squares-geometry.png",
+        "sha256": "2bba9e628beeec8a292ef1fdb60b2fa84343a51c1c08a2146a778f1675f50c2b"
+      }
+    ],
+    "fixes": [
+      "将 tab 缩进的数学伪代码转换为可渲染公式的缩进引用"
+    ]
+  },
+  {
+    "file": "计算方法 5 快速傅里叶变换（FFT）.md",
+    "slug": "fft",
+    "sourceSha256": "4bf2b47a3ee11b1ad050e7ec3df7b7e2f214fa1b707724542e7de8b40a589155",
+    "characters": 15688,
+    "images": 8,
+    "assets": [
+      {
+        "file": "快速傅里叶变换（FFT）.assets/01-三点确定二次多项式.png",
+        "sha256": "dc67818674edb04b6a3c0e12ca63c74a8698c5ef8a07c5b3d3bf499703882832"
+      },
+      {
+        "file": "快速傅里叶变换（FFT）.assets/02-点值相乘.png",
+        "sha256": "9dfd84ee0e4ef50e297bd1378e8813749a51cfe1b52d3570bbf543e5a2c1c22e"
+      },
+      {
+        "file": "快速傅里叶变换（FFT）.assets/03-乘法的三步转换.png",
+        "sha256": "0ddd272337549f153bd76029e1ad5b93dd936c4dcd4eb5b46461fa05c466b561"
+      },
+      {
+        "file": "快速傅里叶变换（FFT）.assets/04-奇偶拆分与递归合并.png",
+        "sha256": "9c9338946ce75ff8aed8c9da18c4ecba872b07aefc90d9c11220258a6f4e3ca7"
+      },
+      {
+        "file": "快速傅里叶变换（FFT）.assets/05-四次单位根的由来.png",
+        "sha256": "50c324a63e29029e95fec81fcd4210358e107bcf9b198d897f7d91765a035f26"
+      },
+      {
+        "file": "快速傅里叶变换（FFT）.assets/06-单位根的正负配对与平方.png",
+        "sha256": "9fe16998461bbd458be3a2f2f9caed2863dbf5f20e0cd3a349bef74b3a257914"
+      },
+      {
+        "file": "快速傅里叶变换（FFT）.assets/07-FFT合并公式.png",
+        "sha256": "70af78d3e573461f55a9e73e5be1e9d646eb3a7d5553ae85162360f2c54b829d"
+      },
+      {
+        "file": "快速傅里叶变换（FFT）.assets/08-DFT逆矩阵.png",
+        "sha256": "6b5562972c8b6d1f6e6eb5d2947599e5f3fbab8d2933a3e43071614ab16a54a1"
+      }
+    ],
+    "fixes": [
+      "将公式外的粗体标记转换为兼容中文相邻字符的 strong 标签",
+      "将公式外的粗体标记转换为兼容中文相邻字符的 strong 标签",
+      "将公式外的粗体标记转换为兼容中文相邻字符的 strong 标签",
+      "将公式外的粗体标记转换为兼容中文相邻字符的 strong 标签"
+    ]
+  },
+  {
+    "file": "计算方法 6 高斯消元、LU分解与迭代法.md",
+    "slug": "linear-systems",
+    "sourceSha256": "aa626ff8c44c4154b077648ee5b3472d169a27a80f1572d17776e616f68bd117",
+    "characters": 11380,
+    "images": 0,
+    "assets": [],
+    "fixes": [
+      "将公式外的粗体标记转换为兼容中文相邻字符的 strong 标签",
+      "将公式外的粗体标记转换为兼容中文相邻字符的 strong 标签",
+      "将公式外的粗体标记转换为兼容中文相邻字符的 strong 标签"
+    ]
+  },
+  {
+    "file": "计算方法 7 特征值、谱分解与幂迭代.md",
+    "slug": "eigenvalues",
+    "sourceSha256": "e28480de958026dc8d4d8538a61e39dd59c18e465b4b10cd7178b501b8b410d7",
+    "characters": 14627,
+    "images": 0,
+    "assets": [],
+    "fixes": []
+  },
+  {
+    "file": "计算方法 8 奇异值分解（SVD）.md",
+    "slug": "svd",
+    "sourceSha256": "1eb71f260f3661e4c773694d6bb0fd4ec9fdb1d31731c7a83148f94168da49cd",
+    "characters": 13164,
+    "images": 8,
+    "assets": [
+      {
+        "file": "奇异值分解.assets/02-建系伸缩与摆放.png",
+        "sha256": "c0091fa465bc1294b4269d9d633698a4235f2ad2bfeabfc7c9e91753c31ef733"
+      },
+      {
+        "file": "奇异值分解.assets/01-正交基与坐标提取.png",
+        "sha256": "ca4e9cd9280cb97185b356ae8358d62fdecb5422a0e710d14496e4e18db8ce55"
+      },
+      {
+        "file": "奇异值分解.assets/03-零奇异值压成直线.png",
+        "sha256": "544165f8d7bb95ed6f5f8adbe74eb705e7edac62bcb68204b49d38036b6c3f96"
+      },
+      {
+        "file": "奇异值分解.assets/04-近奇异矩阵的求逆.png",
+        "sha256": "1544dcd451895ca6b16db9ae969839d6f1863e2e13ad062b43e8924b17280af3"
+      },
+      {
+        "file": "奇异值分解.assets/05-奇异值谱与小奇异值.png",
+        "sha256": "72dcc8cc64a38fb0283ceb5c540a39b3381cf323c2f617b8927c9183bdeb3c3c"
+      },
+      {
+        "file": "奇异值分解.assets/08-图像的加权分量.png",
+        "sha256": "93d3d9600dae7000abd397c9720ab91f93fb4d87ed5dd6b2e95c25f2b9360fd9"
+      },
+      {
+        "file": "奇异值分解.assets/10-前两项与块状结构.png",
+        "sha256": "0b2fd923748aa03f69ed12761311fad4707d5a188ab0a5b31d8d20956ab21a5b"
+      },
+      {
+        "file": "奇异值分解.assets/12-不同截断阶数的图像.png",
+        "sha256": "e89a8d236768b674bb01c7e73f77b74596c8c372d5010de554b3d2e0bb54974e"
+      }
+    ],
+    "fixes": [
+      "跨行行内公式合并为单行"
+    ]
+  }
+]
