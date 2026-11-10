@@ -3,6 +3,8 @@ dist/
 .astro/
 handouts/.vitepress/dist/
 handouts/.vitepress/cache/
+crypto-handouts/.vitepress/dist/
+crypto-handouts/.vitepress/cache/
 .superpowers/
 *.log
 notes-source.local.json

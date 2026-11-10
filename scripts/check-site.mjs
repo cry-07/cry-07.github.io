@@ -1,6 +1,7 @@
 import { readFile, readdir, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { chapters } from '../chapters.mjs';
+import { cryptoChapters } from '../crypto-chapters.mjs';
 import { base } from '../site.config.mjs';
 const root = path.resolve('dist');
 async function walk(dir) { const out = []; for (const item of await readdir(dir,{withFileTypes:true})) { const name=path.join(dir,item.name); if(item.isDirectory()) out.push(...await walk(name)); else out.push(name); } return out; }
@@ -21,7 +22,10 @@ for (const file of files) {
   }
 }
 for(const c of chapters) if(!await exists(path.join(root,'numerical-methods/notes',c.slug))) failures.push(`缺少章节：${c.slug}`);
+for(const c of cryptoChapters) if(!await exists(path.join(root,'crypto-handouts/notes',c.slug))) failures.push(`缺少密码学章节：${c.slug}`);
 const report = JSON.parse(await readFile('handouts/import-report.json','utf8'));
 if(report.reduce((n,c)=>n+c.images,0)!==23) failures.push('导入图片数不符');
+const cryptoReport = JSON.parse(await readFile('crypto-handouts/import-report.json','utf8'));
+if(cryptoReport.chapters.reduce((n,c)=>n+c.images,0)!==27) failures.push('密码学导入图片数不符');
 if(failures.length){console.error([...new Set(failures)].join('\n'));process.exit(1);}
-console.log(`已检查 ${files.length} 个 HTML 页面：9 篇讲义齐全，本地链接与资源均有效，未发现公式错误标记。`);
+console.log(`已检查 ${files.length} 个 HTML 页面：9 篇计算方法及 8 篇密码学讲义齐全，本地链接与资源均有效，未发现公式错误标记。`);

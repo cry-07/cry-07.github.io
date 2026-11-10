@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { base } from '../site.config.mjs';
 import { chapters } from '../chapters.mjs';
+import { cryptoChapters } from '../crypto-chapters.mjs';
 const origin = process.env.PREVIEW_ORIGIN || 'http://127.0.0.1:4173';
 const shots = process.env.SCREENSHOT_DIR || '../../work/browser-check';
 await mkdir(shots, { recursive: true });
@@ -16,7 +17,7 @@ page.on('response', response => { if(response.status() >= 400) requests.push(`${
 async function checkWidth(name) { const w=await page.evaluate(()=>({body:document.documentElement.scrollWidth,viewport:innerWidth})); assert.ok(w.body <= w.viewport+1,`${name}: 页面横向溢出 ${JSON.stringify(w)}`); results.push(`${name}: no horizontal overflow`); }
 try {
   await page.goto(origin+base, { waitUntil:'networkidle' });
-  assert.equal(await page.locator('.entry:visible').count(),9);
+  assert.equal(await page.locator('.entry:visible').count(),chapters.length+cryptoChapters.length);
   await page.screenshot({path:shots+'/home-desktop.png',fullPage:false});
   await checkWidth('desktop home');
   await page.getByRole('button',{name:'文章随笔 00'}).click();

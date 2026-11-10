@@ -1,6 +1,6 @@
 # cryself · 个人博客与计算方法讲义
 
-一个可以继续维护的静态网站：**Astro 个人博客 + VitePress 课程讲义**。已导入 9 篇计算方法笔记、23 处图片，附牛顿法交互演示。原始笔记目录不受修改。
+一个可以继续维护的静态网站：**Astro 个人博客 + VitePress 课程讲义**。已导入 9 篇计算方法笔记、23 处图片，附牛顿法交互演示；另有 8 篇密码学原理笔记、27 处图片，包含证明方法与历年试卷。原始笔记目录不受修改。
 
 ## 本地查看
 
@@ -169,3 +169,25 @@ dist/                         合并后的最终静态网站
 ```
 
 不需要数据库或服务器后台。后续可继续添加其他课程、算法演示或文章。
+
+
+## 密码学原理讲义
+
+正式入口：[密码学原理](https://cry-07.github.io/crypto-handouts/)。原笔记目录为 `D:\大学文件\密码学原理\Notes`。
+
+```powershell
+npm run import:crypto
+npm run build
+npm run check:site
+git add .
+git commit -m "Update cryptography notes"
+git push
+```
+
+新目录可以通过 `npm run import:crypto -- "D:\新的目录\Notes"` 指定，也可在 `notes-source.local.json` 中设置 `cryptoSource`。
+
+`crypto-chapters.mjs` 维护章节顺序和网页路径；`crypto-handouts/notes/` 为生成的正文与配图；`crypto-handouts/import-report.json` 记录来源校验值和网页格式调整。网站副本会在下次导入时覆盖，请在原笔记中维护长期正文修改。
+
+目前按“基础理论 → 证明方法 → 历年试卷”排序。原目录中的《概率计算基础》为空，导入时记录并跳过；写好后可在章节索引中加入。PDF 不参与 Markdown 笔记导入。
+
+证明方法中的章节交叉引用已转换为网站链接，HTML 图片和 Typora 本地图片引用已转换为可发布的静态资源；原 Markdown 和图片保持不变。

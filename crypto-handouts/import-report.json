@@ -1,0 +1,243 @@
+{
+  "chapters": [
+    {
+      "file": "完美保密.md",
+      "slug": "perfect-secrecy",
+      "sourceSha256": "70371be6e0770cbbc8256203b2eadd1dc987c72cffcb537f6a26590c258d2562",
+      "images": 1,
+      "assets": [
+        {
+          "file": "完美保密.assets/image-20260924100232427.png",
+          "external": false,
+          "sha256": "8e2ae3e8db197017579292866acbd0ef8a8080dab2ce792945926edafd2b7215"
+        }
+      ],
+      "fixes": [
+        "转义均匀抽样箭头中的美元符号，避免截断行内公式",
+        "将 HTML 图片转为 Markdown，保留图片内容与说明"
+      ]
+    },
+    {
+      "file": "计算安全（Computational Security）.md",
+      "slug": "computational-security",
+      "sourceSha256": "c221855a642691922efd84662976e95dab8e9dda80f7ae570ea187dfb1292529",
+      "images": 2,
+      "assets": [
+        {
+          "file": "计算安全（Computational Security）.assets/prg-encryption.png",
+          "external": false,
+          "sha256": "09528a4543b90b0b3d065dcc9914d57748f10baeb9d2fa20e1a73fa555dff86b"
+        },
+        {
+          "file": "计算安全（Computational Security）.assets/reduction-overview.png",
+          "external": false,
+          "sha256": "b7edc431bdef76b4c0a571d51bb89e632de78dba6ca4ec88091a486089c113e3"
+        }
+      ],
+      "fixes": [
+        "将 HTML 图片转为 Markdown，保留图片内容与说明",
+        "将 HTML 图片转为 Markdown，保留图片内容与说明"
+      ]
+    },
+    {
+      "file": "流密码（Stream Cipher）.md",
+      "slug": "stream-ciphers",
+      "sourceSha256": "536793ac012392fbb229eed3e662de43d0bf767b4ba17842cac272e006544a01",
+      "images": 9,
+      "assets": [
+        {
+          "file": "image-20261008091845288.png",
+          "external": true,
+          "sha256": "ae6ef3f9ae56d0e0e1df72b98e7d66c9dde737b6a056c9849858fe3448a1b003"
+        },
+        {
+          "file": "流密码（Stream Cipher）.assets/image-20261008095820700.png",
+          "external": false,
+          "sha256": "eef5c6392f577972d8b4d97c00320bba3c839cc782d464ae995170afbf3349ed"
+        },
+        {
+          "file": "流密码（Stream Cipher）.assets/synchronized-mode.png",
+          "external": false,
+          "sha256": "a41db643d2ceec5b59a6fe1215d68836b51e1b1346015e42732b61a6540c375b"
+        },
+        {
+          "file": "流密码（Stream Cipher）.assets/unsynchronized-mode.png",
+          "external": false,
+          "sha256": "4375fe5002255dacef3949aa2cb5184ce49db375a0f614dd7ec3a9c09695836e"
+        },
+        {
+          "file": "流密码（Stream Cipher）.assets/image-20261008103607675.png",
+          "external": false,
+          "sha256": "89f3511bb4400d73c66f2f2546a05b45121900273836d33ace6a39457b117e79"
+        },
+        {
+          "file": "流密码（Stream Cipher）.assets/image-20261008103625082.png",
+          "external": false,
+          "sha256": "de1e67cee08a564f43b06c6dd0ea85ebd76efafa639f01460a71d728fd9df424"
+        },
+        {
+          "file": "流密码（Stream Cipher）.assets/image-20261008104605436.png",
+          "external": false,
+          "sha256": "4f3d132dab9d3d675a40e1aff03ca69a495a369776266ce50f424b6d64554844"
+        },
+        {
+          "file": "流密码（Stream Cipher）.assets/image-20261027100042150.png",
+          "external": false,
+          "sha256": "03cffa73d3594d4d52a0dff340db6e7ecb5d1d53e653f1436158613ac7bcc705"
+        },
+        {
+          "file": "流密码（Stream Cipher）.assets/wep-encryption.png",
+          "external": false,
+          "sha256": "b6b541548c04e69f5a0d01384a80e3a2faec38011d133595e37009460ede8283"
+        }
+      ],
+      "fixes": [
+        "将原笔记引用的 Typora 本地图片复制为网站资源"
+      ]
+    },
+    {
+      "file": "CPA安全与伪随机函数（Security and Pseudoradom Functions）.md",
+      "slug": "cpa-and-prf",
+      "sourceSha256": "fbedbe7715afe456f9029bfad854181462395a65ef121dfd888e5f975f0e9be0",
+      "images": 4,
+      "assets": [
+        {
+          "file": "CPA安全与伪随机函数（Security and Pseudoradom Functions）.assets/prg-encryption.png",
+          "external": false,
+          "sha256": "f7ff15510b3c8ca69e51a44575956305af00816c7b1e3811f16e4553fec9398e"
+        },
+        {
+          "file": "CPA安全与伪随机函数（Security and Pseudoradom Functions）.assets/random-functions.png",
+          "external": false,
+          "sha256": "ec8eb8c7cc349d69729455af43d27a89576d0c92383f47fe3a74d876ae67ef98"
+        },
+        {
+          "file": "CPA安全与伪随机函数（Security and Pseudoradom Functions）.assets/prf-encryption.png",
+          "external": false,
+          "sha256": "aaae77e5721a5c6c373c416e73a2b0dd866c9c222e767361334c0a96549d0ea4"
+        },
+        {
+          "file": "CPA安全与伪随机函数（Security and Pseudoradom Functions）.assets/random-permutations.png",
+          "external": false,
+          "sha256": "e3c944ab08b0d0eb001ae7208e0f0e0aad3e87efbc8644c2a4c08d04b57035b3"
+        }
+      ],
+      "fixes": []
+    },
+    {
+      "file": "分组密码（Block Cipher）.md",
+      "slug": "block-ciphers",
+      "sourceSha256": "7ca893c2356abb840135be429dc3d89beb4232158dafde3b08bcd4471f1412b7",
+      "images": 9,
+      "assets": [
+        {
+          "file": "分组密码（Block Cipher）.assets/ecb-pattern-leakage.png",
+          "external": false,
+          "sha256": "9a0d6d0a3064b8f5a3a56ab72c9a1e5e6f8a3a0d03bc2c0e52b8f6b31f92c0b3"
+        },
+        {
+          "file": "分组密码（Block Cipher）.assets/cbc-mode.png",
+          "external": false,
+          "sha256": "033913d6f9fb3f0492c33a24c461a64f136cee47c77acb5eaad46f44ce267444"
+        },
+        {
+          "file": "分组密码（Block Cipher）.assets/ofb-mode.png",
+          "external": false,
+          "sha256": "32e148f4f4265cce4642cc1cf67d60e8b98b4b863c7252e199f5caf3e474a6d5"
+        },
+        {
+          "file": "分组密码（Block Cipher）.assets/ctr-mode.png",
+          "external": false,
+          "sha256": "2b3d977cf88461b43bcb116eded52a9f98bba3f79526c3a2bd9b8c25076a0e28"
+        },
+        {
+          "file": "分组密码（Block Cipher）.assets/spn-round.png",
+          "external": false,
+          "sha256": "0f3f41571d3406cfe19ea330531da82958e5d1cdd41e33bcd1cbc40e6475d935"
+        },
+        {
+          "file": "分组密码（Block Cipher）.assets/image-20261027144210792.png",
+          "external": false,
+          "sha256": "4cda645a050baec82755b067db0e5522ca2dc22644848ba50f81c3100d7dc43b"
+        },
+        {
+          "file": "分组密码（Block Cipher）.assets/feistel-network.png",
+          "external": false,
+          "sha256": "e3babc5689ca901ab09f127dc99a1614937ab95101f7ee6f92841d3795658dc5"
+        },
+        {
+          "file": "分组密码（Block Cipher）.assets/des-round.png",
+          "external": false,
+          "sha256": "f4c27741f55fa7acfdafbf0fbbe936ef4b237b0b9dc35620b4cd9efb6bdff3b0"
+        },
+        {
+          "file": "分组密码（Block Cipher）.assets/aes-round.png",
+          "external": false,
+          "sha256": "627b4f12798347b64c8b84f689437ffb01768ae7e437970c45c0fb685227b0a0"
+        }
+      ],
+      "fixes": [
+        "将 HTML 图片转为 Markdown，保留图片内容与说明",
+        "将 HTML 图片转为 Markdown，保留图片内容与说明",
+        "将 HTML 图片转为 Markdown，保留图片内容与说明",
+        "将 HTML 图片转为 Markdown，保留图片内容与说明",
+        "将 HTML 图片转为 Markdown，保留图片内容与说明",
+        "将 HTML 图片转为 Markdown，保留图片内容与说明",
+        "将 HTML 图片转为 Markdown，保留图片内容与说明"
+      ]
+    },
+    {
+      "file": "密码学证明题型与解题方法.md",
+      "slug": "proof-methods",
+      "sourceSha256": "7b8d52e6fd83504b7a7fac52b29e10af4b0391238e2b884dfd5eac77d78b8bcc",
+      "images": 0,
+      "assets": [],
+      "fixes": [
+        "笔记链接映射：./完美保密.md → perfect-secrecy",
+        "笔记链接映射：./计算安全（Computational Security）.md → computational-security",
+        "笔记链接映射：./CPA安全与伪随机函数（Security and Pseudoradom Functions）.md → cpa-and-prf",
+        "笔记链接映射：./分组密码（Block Cipher）.md → block-ciphers",
+        "笔记链接映射：./流密码（Stream Cipher）.md → stream-ciphers",
+        "笔记链接映射：./2023密码学期中考试（含解答）.md → midterm-2023",
+        "笔记链接映射：./2025medium.md → midterm-2025"
+      ]
+    },
+    {
+      "file": "2023密码学期中考试（含解答）.md",
+      "slug": "midterm-2023",
+      "sourceSha256": "241000d57444f632e6e94b746a685af84a11e7d4aaccdff9e2d2a736962bf91c",
+      "images": 1,
+      "assets": [
+        {
+          "file": "2023密码学期中考试.assets/cfb-mac.png",
+          "external": false,
+          "sha256": "a2dfa2bc771b735e24322c1ed497d0441b6dbf465eaf537f729df108a61228a0"
+        }
+      ],
+      "fixes": [
+        "次级大标题转为章节标题：密码学期中考试解答"
+      ]
+    },
+    {
+      "file": "2025medium.md",
+      "slug": "midterm-2025",
+      "sourceSha256": "87b2ba6d9602d50f92c38d8262325da8f712130f4a56a18fce3acfa3491b55b2",
+      "images": 1,
+      "assets": [
+        {
+          "file": "2025medium.assets/q6-scheme.png",
+          "external": false,
+          "sha256": "01289e45dc2f4eed0d5837a3e6cf81dd5f6498c2e3df7ce7c4b730586220de96"
+        }
+      ],
+      "fixes": []
+    }
+  ],
+  "skipped": [
+    {
+      "file": "概率计算基础.md",
+      "reason": "原文件为空",
+      "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}
