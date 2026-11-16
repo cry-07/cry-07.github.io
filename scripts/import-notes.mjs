@@ -70,8 +70,6 @@ for (const chapter of chapters) {
     return `<strong>${content}</strong>`;
   });
   text = text.replace(/^# .+$/m, `# ${chapter.title}`);
-  const intro = `<div class="chapter-meta"><span>NUMERICAL METHODS · ${chapter.no}</span><span>${Math.max(1, Math.ceil(text.length / 500))} 分钟阅读</span></div>\n\n`;
-  text = text.replace(/^(# .+\n)/m, `$1\n${intro}`);
   if (chapter.slug === 'root-finding') text += '\n\n## 动手试一试：牛顿法\n\n改变初值，逐步观察切线怎样把近似值带向根。残差和迭代差会同时显示。\n\n<NewtonDemo />\n';
   const frontmatter = `---\ntitle: ${JSON.stringify(chapter.title)}\ndescription: ${JSON.stringify(chapter.summary)}\n---\n\n`;
   await writeFile(path.join(output, chapter.slug + '.md'), frontmatter + text, 'utf8');

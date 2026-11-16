@@ -5,8 +5,6 @@ description: "在系数与点值之间切换，循着单位根理解 FFT 的分�
 
 # 快速傅里叶变换（FFT）
 
-<div class="chapter-meta"><span>NUMERICAL METHODS · 5</span><span>30 分钟阅读</span></div>
-
 
 ## 从多项式乘法出发：
 

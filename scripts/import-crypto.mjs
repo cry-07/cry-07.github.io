@@ -87,8 +87,6 @@ for (const chapter of cryptoChapters) {
     fixes.push(`次级大标题转为章节标题：${title}`); return '## '+title;
   });
   if (!seenTitle) text = '# '+chapter.title+'\n\n'+text;
-  const intro = `<div class="chapter-meta"><span>CRYPTOGRAPHY · ${chapter.no}</span><span>${Math.ceil(text.length/500)} 分钟阅读</span></div>`;
-  text = text.replace(/^(# .+)$/m, '$1\n\n'+intro);
   await writeFile(path.join(target, chapter.slug+'.md'), `---\ntitle: ${JSON.stringify(chapter.title)}\ndescription: ${JSON.stringify(chapter.summary)}\n---\n\n${text}\n`);
   report.push({ file: chapter.file, slug: chapter.slug, sourceSha256: hash(original), images: refs.length, assets, fixes });
 }

@@ -5,8 +5,6 @@ description: "从插值误差出发，理解最优节点、极小极大性质与
 
 # Chebyshev 多项式与函数逼近
 
-<div class="chapter-meta"><span>NUMERICAL METHODS · 3</span><span>12 分钟阅读</span></div>
-
 
 ## 误差公式
 

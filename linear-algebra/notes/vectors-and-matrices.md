@@ -5,8 +5,6 @@ description: "从线性组合、点积与几何出发，理解矩阵乘法的四
 
 # 向量和矩阵
 
-<div class="chapter-meta"><span>LINEAR ALGEBRA · 01</span><span>22 分钟阅读</span></div>
-
 ## 线性组合与几何形态：
 
 同一空间中的向量 $v,w$ 可以先数乘、再相加，得到线性组合（linear combination）$cv+dw$，其中 $c,d$ 为任意实数 

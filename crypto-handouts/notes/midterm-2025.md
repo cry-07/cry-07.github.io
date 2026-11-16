@@ -5,8 +5,6 @@ description: "围绕一次一密、PRG、PRF 和 CBC 变体逐题梳理解答与
 
 # 2025 期中试卷讲解
 
-<div class="chapter-meta"><span>CRYPTOGRAPHY · 2025</span><span>27 分钟阅读</span></div>
-
 
 
 ## Q1（10 分）：Kerckhoffs 准则与一次一密

@@ -36,11 +36,12 @@ await page.setViewportSize({width:1600,height:1050});
 for(const slug of ['vectors-and-matrices','solving-linear-systems']) {
  await page.goto(origin+'/linear-algebra/notes/'+slug,{waitUntil:'networkidle'});
  assert.ok(await page.locator('.VPSidebar').isVisible());
- assert.ok(await page.locator('.VPDocAsideOutline').isVisible());
+ assert.equal(await page.locator('.VPDocAsideOutline').count(),0);
+ assert.ok(await page.locator('.course-section-nav').isVisible());
  assert.equal(await page.locator('h1').count(),1);
  assert.ok(await page.locator('mjx-container').count()>50);
  assert.equal(await page.locator('[data-mjx-error],mjx-merror').count(),0);
- const anchors=await page.locator('.VPDocAsideOutline a').evaluateAll(links=>links.map(l=>l.getAttribute('href')).filter(h=>!document.getElementById(decodeURIComponent(h.slice(1)))));
+ const anchors=await page.locator('.course-section-nav a').evaluateAll(links=>links.map(l=>l.getAttribute('href')).filter(h=>!document.getElementById(decodeURIComponent(h.slice(1)))));
  assert.deepEqual(anchors,[]);
  await page.evaluate(()=>document.documentElement.classList.add('dark'));
  await page.screenshot({path:shots+'/'+slug+'.png'});

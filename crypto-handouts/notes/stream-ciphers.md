@@ -5,8 +5,6 @@ description: "理解密钥流、状态更新、同步与异步模式，以及重
 
 # 流密码
 
-<div class="chapter-meta"><span>CRYPTOGRAPHY · 03</span><span>13 分钟阅读</span></div>
-
 ## 简介：
 
 ### 什么是流密码：

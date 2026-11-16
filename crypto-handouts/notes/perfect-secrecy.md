@@ -5,8 +5,6 @@ description: "从条件概率与不可区分游戏出发，理解完美保密、
 
 # 完美保密
 
-<div class="chapter-meta"><span>CRYPTOGRAPHY · 01</span><span>14 分钟阅读</span></div>
-
 ## 加密模型：
 
 一个加密方案（encryption scheme） $\Pi$ ，也叫做一个密码（cipher）或一个密码系统（cryptosystem），包含三个算法 Gen、Enc、Dec ，以及一个有限消息空间（finite message space） $\mathrm{M}$ 的规范（specification）。其中：

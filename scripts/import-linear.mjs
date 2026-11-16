@@ -36,8 +36,7 @@ for (const c of linearChapters) {
     text=text.replace(whole,`![${alt}](./assets/${c.slug}/${path.basename(asset)})`);
     assets.push(raw);
   }
-  const meta=`<div class="chapter-meta"><span>LINEAR ALGEBRA · ${c.no}</span><span>${Math.ceil(text.length/500)} 分钟阅读</span></div>`;
-  await writeFile(path.join(target,c.slug+'.md'),`---\ntitle: ${JSON.stringify(c.title)}\ndescription: ${JSON.stringify(c.summary)}\n---\n\n# ${c.title}\n\n${meta}\n\n${text.trim()}\n`);
+  await writeFile(path.join(target,c.slug+'.md'),`---\ntitle: ${JSON.stringify(c.title)}\ndescription: ${JSON.stringify(c.summary)}\n---\n\n# ${c.title}\n\n${text.trim()}\n`);
   report.push({file:c.file,slug:c.slug,sourceSha256:createHash('sha256').update(original).digest('hex'),assets,fixes});
 }
 await writeFile(path.join(root,'linear-algebra/import-report.json'),JSON.stringify(report,null,2)+'\n');

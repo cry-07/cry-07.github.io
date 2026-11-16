@@ -5,8 +5,6 @@ description: "从选择明文攻击到 PRF、PRP，用安全游戏与归约理�
 
 # CPA 安全与伪随机函数
 
-<div class="chapter-meta"><span>CRYPTOGRAPHY · 04</span><span>21 分钟阅读</span></div>
-
 ## 为什么需要更强的安全性：
 
 ### 单次加密与多次加密：

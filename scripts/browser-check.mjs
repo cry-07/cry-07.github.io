@@ -43,7 +43,7 @@ try {
   await page.goto(origin+base+'numerical-methods/',{waitUntil:'networkidle'});
   await page.screenshot({path:shots+'/course-desktop.png',fullPage:true});
   await checkWidth('desktop course');
-  assert.equal(await page.locator('.chapter-card').count(),9);
+  assert.equal(await page.locator('.landing-directory li').count(),9);
   assert.equal(await page.locator('.return-blog').getAttribute('href'),base);
   await page.getByRole('button',{name:'搜索讲义',exact:true}).click();
   await page.locator('#localsearch-input').fill('奇异值');
@@ -94,7 +94,7 @@ try {
   }
   await page.getByRole('button',{name:'章节目录',exact:true}).click();
   assert.ok(await page.locator('.VPSidebar.open').isVisible());
-  await page.locator('.VPSidebar a[href$="/notes/root-finding"]').click();
+  await page.locator('.course-sidebar a[href$="/notes/root-finding"]').click();
   await page.waitForURL('**/notes/root-finding');
   await page.locator('.newton-demo').waitFor({state:'attached'});
   results.push('mobile: chapter navigation');

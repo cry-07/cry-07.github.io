@@ -1,6 +1,8 @@
 ---
-layout: home
-title: 计算方法讲义
+layout: doc
+title: 计算方法
+prev: false
+next: false
 ---
 
-<CourseHome />
+<CourseLanding />

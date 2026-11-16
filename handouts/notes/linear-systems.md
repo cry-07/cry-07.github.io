@@ -5,8 +5,6 @@ description: "从消元与回代，到 Jacobi、Gauss–Seidel 和谱半径。"
 
 # 高斯消元、LU 分解与迭代法
 
-<div class="chapter-meta"><span>NUMERICAL METHODS · 6</span><span>22 分钟阅读</span></div>
-
 
 ## 高斯消元与 LU 分解：
 

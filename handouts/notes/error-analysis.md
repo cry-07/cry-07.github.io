@@ -5,8 +5,6 @@ description: "从前向误差、后向误差到条件数，理解计算结果为
 
 # 误差分析
 
-<div class="chapter-meta"><span>NUMERICAL METHODS · 1.1</span><span>7 分钟阅读</span></div>
-
 
 ##  误差估计
 

@@ -5,8 +5,6 @@ description: "用有限个点恢复多项式，再走向秘密分享与纠删码
 
 # 插值、秘密分享、自纠错码
 
-<div class="chapter-meta"><span>NUMERICAL METHODS · 2</span><span>11 分钟阅读</span></div>
-
 
 ## 插值（Interpolation）:
 

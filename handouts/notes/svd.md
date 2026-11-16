@@ -5,8 +5,6 @@ description: "把矩阵作用拆成建系、伸缩与摆放，理解低秩近似
 
 # 奇异值分解（SVD）
 
-<div class="chapter-meta"><span>NUMERICAL METHODS · 8</span><span>25 分钟阅读</span></div>
-
 
 ## 把矩阵作用拆成三个步骤：
 

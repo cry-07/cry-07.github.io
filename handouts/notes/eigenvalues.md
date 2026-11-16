@@ -5,8 +5,6 @@ description: "沿着特征方向理解矩阵，并用迭代估计特征值。"
 
 # 特征值、谱分解与幂迭代
 
-<div class="chapter-meta"><span>NUMERICAL METHODS · 7</span><span>28 分钟阅读</span></div>
-
 
 ## 特征值与实对称矩阵：
 

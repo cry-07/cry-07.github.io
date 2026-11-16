@@ -5,8 +5,6 @@ description: "高效敌手、可忽略函数、EAV 安全与 PRG：从信息论�
 
 # 计算安全
 
-<div class="chapter-meta"><span>CRYPTOGRAPHY · 02</span><span>24 分钟阅读</span></div>
-
 ## 从完美保密到计算安全：
 
 ### 为什么放宽安全要求：

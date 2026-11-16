@@ -5,8 +5,6 @@ description: "围绕消元与可逆性，整理 LU 分解、转置、鞍点矩�
 
 # 方阵情况下求解线性方程组 Ax = b
 
-<div class="chapter-meta"><span>LINEAR ALGEBRA · 02</span><span>37 分钟阅读</span></div>
-
 ## 消元保持行空间不变
 
 初等行变换产生的新行是原来各行的线性组合，因此新行空间包含于原行空间。例如，把第 $i$ 行减去第 $j$ 行的 $\ell$ 倍： 

@@ -5,8 +5,6 @@ description: "工作模式、SPN、Feistel、DES 与 AES，把设计思想和结
 
 # 分组密码
 
-<div class="chapter-meta"><span>CRYPTOGRAPHY · 05</span><span>20 分钟阅读</span></div>
-
 ## 分组密码与安全目标：
 
 ### 什么是分组密码：

@@ -5,8 +5,6 @@ description: "在区间收缩与切线迭代中，理解求根算法的直觉、
 
 # 二分法、牛顿法
 
-<div class="chapter-meta"><span>NUMERICAL METHODS · 1.2</span><span>8 分钟阅读</span></div>
-
 
 ##  基本问题：
 

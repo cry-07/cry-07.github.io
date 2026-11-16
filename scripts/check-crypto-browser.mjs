@@ -14,10 +14,10 @@ page.on('response',r=>{if(r.status()>=400)failed.push(`${r.status()} ${r.url()}`
 async function width(label){assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),label+' 页面横向溢出');}
 try{
   await page.goto(origin+base,{waitUntil:'networkidle'});
-  assert.equal(await page.locator('.entry').count(),17);
+  assert.equal(await page.locator('.entry').count(),19);
   await page.locator('#entry-search').fill('密码学');assert.equal(await page.locator('.entry:visible').count(),8);
-  await page.locator('.crypto-course-link').click();await page.waitForURL('**/crypto-handouts/');
-  assert.equal(await page.locator('.VPFeature').count(),8);await width('讲义首页');
+  await page.locator('[data-course="crypto"]').click();await page.waitForURL('**/crypto-handouts/');
+  assert.equal(await page.locator('.landing-directory li').count(),8);await width('讲义首页');
   assert.equal(await page.locator('.return-blog').getAttribute('href'),base);
   await page.screenshot({path:shots+'/crypto-home-desktop.png',fullPage:true});
   await page.getByRole('button',{name:'搜索讲义',exact:true}).click();
@@ -51,7 +51,7 @@ try{
   await page.setViewportSize({width:390,height:844});await page.goto(origin+cryptoHref('notes/block-ciphers'),{waitUntil:'networkidle'});
   await page.screenshot({path:shots+'/crypto-reading-mobile.png'});
   await page.getByRole('button',{name:'章节目录',exact:true}).click();assert.ok(await page.locator('.VPSidebar.open').isVisible());
-  await page.locator('.VPSidebar a[href$="/notes/midterm-2023"]').click();await page.waitForURL('**/notes/midterm-2023');await page.getByRole('heading',{name:'2023 密码学期中考试与解答',exact:false}).waitFor({state:'visible'});await page.locator('.vp-doc img').first().waitFor({state:'attached'});
+  await page.locator('.course-sidebar a[href$="/notes/midterm-2023"]').click();await page.waitForURL('**/notes/midterm-2023');await page.getByRole('heading',{name:'2023 密码学期中考试与解答',exact:false}).waitFor({state:'visible'});await page.locator('.vp-doc img').first().waitFor({state:'attached'});
   await page.goto(origin+notesHref('notes/root-finding'),{waitUntil:'networkidle'});assert.equal(await page.locator('.newton-demo').count(),1);assert.equal(await page.locator('.return-blog').getAttribute('href'),base);
   results.push('390px / 320px 手机阅读、章节切换及计算方法入口回归通过');
   assert.deepEqual(errors,[]);assert.deepEqual(failed,[]);

@@ -5,8 +5,6 @@ description: "把拟合写成投影问题，用正交分解寻找最接近的解
 
 # 最小二乘法与 QR 分解
 
-<div class="chapter-meta"><span>NUMERICAL METHODS · 4</span><span>26 分钟阅读</span></div>
-
 
 ## 最小二乘法概述：
 
