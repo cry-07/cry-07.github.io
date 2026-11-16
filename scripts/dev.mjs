@@ -1,13 +1,14 @@
 import { spawn } from 'node:child_process';
 import http from 'node:http';
 import net from 'node:net';
-import { notesHref, cryptoHref, base } from '../site.config.mjs';
+import { notesHref, cryptoHref, linearHref, base } from '../site.config.mjs';
 const children = [
+  spawn(process.execPath, ['node_modules/vitepress/bin/vitepress.js', 'dev', 'linear-algebra', '--host', '127.0.0.1', '--port', '5175'], { stdio:'inherit' }),
   spawn(process.execPath, ['node_modules/astro/bin/astro.mjs', 'dev', '--host', '127.0.0.1', '--port', '4321'], { stdio:'inherit' }),
   spawn(process.execPath, ['node_modules/vitepress/bin/vitepress.js', 'dev', 'handouts', '--host', '127.0.0.1', '--port', '5173'], { stdio:'inherit' }),
   spawn(process.execPath, ['node_modules/vitepress/bin/vitepress.js', 'dev', 'crypto-handouts', '--host', '127.0.0.1', '--port', '5174'], { stdio:'inherit' }),
 ];
-const routePort = url => (url || '').startsWith(cryptoHref()) ? 5174 : (url || '').startsWith(notesHref()) ? 5173 : 4321;
+const routePort = url => (url || '').startsWith(linearHref()) ? 5175 : (url || '').startsWith(cryptoHref()) ? 5174 : (url || '').startsWith(notesHref()) ? 5173 : 4321;
 const gateway = http.createServer((req, res) => {
   const proxy = http.request({ host:'127.0.0.1', port:routePort(req.url), path:req.url, method:req.method, headers:req.headers }, response => { res.writeHead(response.statusCode, response.headers); response.pipe(res); });
   proxy.on('error', () => { res.writeHead(503); res.end('本地开发服务正在启动，请稍后刷新。'); }); req.pipe(proxy);

@@ -1,11 +1,11 @@
 ---
-title: 线性代数笔记（二）：方阵情况下求解线性方程组 Ax = b
-date: 2026-11-16
-description: 围绕消元与可逆性，整理 LU 分解、转置、鞍点矩阵，以及有限差分与三对角矩阵的联系。
-tags:
-  - 线性代数
-  - 学习笔记
+title: "方阵情况下求解线性方程组 Ax = b"
+description: "围绕消元与可逆性，整理 LU 分解、转置、鞍点矩阵，以及有限差分与三对角矩阵的联系。"
 ---
+
+# 方阵情况下求解线性方程组 Ax = b
+
+<div class="chapter-meta"><span>LINEAR ALGEBRA · 02</span><span>37 分钟阅读</span></div>
 
 ## 消元保持行空间不变
 
@@ -180,7 +180,7 @@ $$
 
 先构造矩阵 $B$，再证明它同时满足 $AB=I$ 和 $BA=I$，最后才能把它记为 $A^{-1}$ 
 
-**构造右逆 $AB=I$** 
+<strong>构造右逆 $AB=I$</strong> 
 
 $A$ 的 $n$ 个列向量是 $\mathbb R^n$ 中的 $n$ 个线性无关向量，因此构成一组基，能唯一表示 $\mathbb R^n$ 中的每个向量。特别地，对单位矩阵的每一列 $e_j$，都存在唯一的系数向量 $b_j$，满足 
 
@@ -196,7 +196,7 @@ AB=\begin{bmatrix}Ab_1&\cdots&Ab_n\end{bmatrix}
 =\begin{bmatrix}e_1&\cdots&e_n\end{bmatrix}=I
 $$
 
-**证明同一个 $B$ 也是左逆** 
+<strong>证明同一个 $B$ 也是左逆</strong> 
 
 由结合律和 $AB=I$，有 
 
@@ -1034,7 +1034,3 @@ $$
 $$
 
 特别地，四个内点对应的矩阵满足 $\det K_4=5$
-
----
-
-上一篇：[线性代数笔记（一）：向量和矩阵](/posts/linear-algebra-01-vectors-and-matrices/)

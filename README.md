@@ -191,3 +191,13 @@ git push
 目前按“基础理论 → 证明方法 → 历年试卷”排序。原目录中的《概率计算基础》为空，导入时记录并跳过；写好后可在章节索引中加入。PDF 不参与 Markdown 笔记导入。
 
 证明方法中的章节交叉引用已转换为网站链接，HTML 图片和 Typora 本地图片引用已转换为可发布的静态资源；原 Markdown 和图片保持不变。
+
+## 线性代数专题与首页专题栏
+
+线性代数入口为 `/linear-algebra/`，当前只收录第一、二章。讲义与密码学共用阅读主题、章节导航、全文搜索、公式渲染和深浅色设置。旧 `/posts/linear-algebra-*` 地址自动跳转到相应讲义页。
+
+在原 `D:/大学文件/线性代数/Notes` 中编辑笔记，然后运行 `npm run import:linear`、`npm run build` 和 `npm run check:site`。可用 `npm run import:linear -- "新的 Notes 目录"` 指定来源。导入范围由 `linear-chapters.mjs` 明确列出，不导入学习记录、状态、教材或未完成章节；来源文件不修改，导入核验信息在 `linear-algebra/import-report.json`。
+
+首页右栏专题及中间课程笔记列表由 `courses.mjs` 统一生成。新增专题时在这里登记其名称、简介、章节数据及地址，后续专题沿用此入口。窄屏时专题入口仍显示在记录列表之前。
+
+预览后可运行 `node scripts/check-linear-browser.mjs` 检查专题布局、讲义导航、公式、搜索和旧链接跳转；默认预览地址为 `http://127.0.0.1:4188`，可通过 `PREVIEW_ORIGIN` 修改。

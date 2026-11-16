@@ -1,0 +1,25 @@
+[
+  {
+    "file": "01-向量和矩阵.md",
+    "slug": "vectors-and-matrices",
+    "sourceSha256": "aea1586c90b81c9e43683763268d12d46d8470eb8f6e4a0549e7750633066204",
+    "assets": [],
+    "fixes": [
+      "纠正 Column 的中文标签",
+      "纠正 Row 的中文标签",
+      "修正主元原列下标",
+      "明确矩形 R 的阶梯形结构"
+    ]
+  },
+  {
+    "file": "02-解线性方程组Ax=b.md",
+    "slug": "solving-linear-systems",
+    "sourceSha256": "4a8cd501b0ea2e2eca93b7a612afbaae095fe29ec0ad08375356c92e6e8a6f7d",
+    "assets": [],
+    "fixes": [
+      "补回缺失的逆行变换公式",
+      "移除旧章节编号引用",
+      "用分量等式连接向量与标量"
+    ]
+  }
+]

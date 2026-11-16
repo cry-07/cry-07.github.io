@@ -15,3 +15,5 @@ export const base = '/' + site.base.split('/').filter(Boolean).join('/') + (site
 export const href = (path = '') => base + path.replace(/^\/+/, '');
 export const notesHref = (path = '') => href('numerical-methods/' + path.replace(/^\/+/, ''));
 export const cryptoHref = (path = '') => href('crypto-handouts/' + path.replace(/^\/+/, ''));
+
+export const linearHref = (path = '') => href('linear-algebra/' + path.replace(/^\/+/, ''));

@@ -9,3 +9,6 @@ crypto-handouts/.vitepress/cache/
 *.log
 notes-source.local.json
 *.zip
+
+linear-algebra/.vitepress/dist/
+linear-algebra/.vitepress/cache/

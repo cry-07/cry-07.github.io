@@ -4,6 +4,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { base } from '../site.config.mjs';
 import { chapters } from '../chapters.mjs';
 import { cryptoChapters } from '../crypto-chapters.mjs';
+import { courses } from '../courses.mjs';
 const origin = process.env.PREVIEW_ORIGIN || 'http://127.0.0.1:4173';
 const shots = process.env.SCREENSHOT_DIR || '../../work/browser-check';
 await mkdir(shots, { recursive: true });
@@ -17,7 +18,7 @@ page.on('response', response => { if(response.status() >= 400) requests.push(`${
 async function checkWidth(name) { const w=await page.evaluate(()=>({body:document.documentElement.scrollWidth,viewport:innerWidth})); assert.ok(w.body <= w.viewport+1,`${name}: 页面横向溢出 ${JSON.stringify(w)}`); results.push(`${name}: no horizontal overflow`); }
 try {
   await page.goto(origin+base, { waitUntil:'networkidle' });
-  assert.equal(await page.locator('.entry:visible').count(),chapters.length+cryptoChapters.length);
+  assert.equal(await page.locator('.entry:visible').count(),courses.reduce((n,c) => n+c.chapters.length,0));
   await page.screenshot({path:shots+'/home-desktop.png',fullPage:false});
   await checkWidth('desktop home');
   await page.getByRole('button',{name:'文章随笔 00'}).click();
@@ -28,9 +29,11 @@ try {
   await page.locator('#entry-search').fill('no-such-entry');
   assert.ok(await page.locator('#empty-state').isVisible());
   await page.locator('#clear-filters').click();
-  await page.locator('[data-topic="插值与逼近"]').click();
-  assert.equal(await page.locator('.entry:visible').count(),3);
-  await page.locator('[data-topic="插值与逼近"]').click();
+  assert.equal(await page.locator('.context-column .course-card').count(), courses.length);
+  assert.equal(await page.locator('.feed-column .course-card').count(), 0);
+  await page.locator('#entry-search').fill('线性代数');
+  assert.equal(await page.locator('.entry:visible').count(), 2);
+  await page.locator('#entry-search').fill('');
   await page.locator('#theme-toggle').click();
   assert.ok(await page.locator('html').evaluate(el=>el.classList.contains('dark')));
   await page.reload(); assert.ok(await page.locator('html').evaluate(el=>el.classList.contains('dark')));
